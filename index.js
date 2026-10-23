@@ -28,8 +28,8 @@ client.on('ready', () => {
     console.log(`Bot online como ${client.user.tag}!`);
 });
 
-// Podes colocar aqui o teu token real ou usar o fictício para testar
-client.login("MTU2MjU4MzAxMjE3OTQ0NzgzOQ.GtAgRR.ovkj1Qm3C9z53G8lx9b6APyQzO_RCLvTSguavA");
+// Usa a variável de ambiente do Render para o token nunca ficar exposto no GitHub
+client.login(process.env.DISCORD_TOKEN);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
